@@ -9,7 +9,8 @@ sum_common([1, 2, 3], [5, 3, 2], [7, 3, 2]) ➞ 5
 list1=[1, 2,2, 3]
 list2=[5, 3,2, 2]
 list3=[7, 3,2, 2]
-  # x=set(list1)&set(list2)&set(list3) &= intersection
+# x=set(list1)&set(list2)&set(list3) 
+# &= intersection
 
 x=set(list1).intersection(set(list2)).intersection(set(list3))
 print (sum(x))
@@ -214,11 +215,20 @@ Examples
 word_builder(["g", "e", "o"], [1, 0, 2]) ➞ "ego"
 word_builder(["e", "t", "s", "t"], [3, 0, 2, 1]) ➞ "test"
 word_builder(["b", "e", "t", "i", "d", "a"], [1, 4, 5, 0, 3, 2]) ➞ "edabit"""
-word = (["g", "e", "o"], [1, 0, 2]) 
-dict1=dict(word[0])
-dict2=dict(word[1])
-print(dict1,dict2)
+# word = (["g", "e", "o"], [1, 0, 2]) 
+# x=["g", "e", "o"]
+# y=[1, 0, 2]
+# text " "
+# for i in [1, 0, 2]
+# print(txt+=)
+ist1=[1, 2,2, 3]
+list2=[5, 3,2, 2]
+list3=[7, 3,2, 2]
+# x=set(list1)&set(list2)&set(list3) 
+# &= intersection
 
+x=set(list1).intersection(set(list2)).intersection(set(list3))
+print (sum(x))
 
 
 
