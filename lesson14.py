@@ -55,7 +55,7 @@ for even numbers and "odd" for odd numbers."""
 #    print("{0} is Odd".format(num))
 x=10
 y=x%2
-# print("zuyg"*(y==0)+"kent"*y)
+# print("zuyg"*(y==0)+"kent"*y)  (not y -----------  y==0)
 print("zuig"*(not y)+"kent"*y)
    
    
