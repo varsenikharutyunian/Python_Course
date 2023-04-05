@@ -24,6 +24,7 @@ z= "Luke, I am your brother in law."
 print(x * (name == "Darth Vader") + y*(name=="Leia")+ z*(name=="Han"))
 """5.Create a function that takes a string and returns the number (count)
  of vowels contained within it."""
+ 
 name = input("Enter name - >")
 print(name.count("a")+name.count("e")+name.count("i")+name.count("o")+name.count("u"))
 """6.Create a function that returns True if a given
@@ -62,6 +63,6 @@ print(result)
 and returns a string with the first and last name swapped."""
 
 name=input("enter name_surname ->")
-name=name.split()
+name=name.split()                        ?
 print(name[1] +" " +name[0])
-print(fstring)
+print(fstring)   
