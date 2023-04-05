@@ -1,3 +1,5 @@
+#  24   tnainner
+
 """1.Create a function that takes a list containing only numbers and return the first element."""
 numbers=[1, 2, 3 ]
 print(numbers[0])
@@ -67,16 +69,19 @@ of multiples of num until the list length reaches length."""
 #     return [*range(num, length*num+1, num)]
 
 # print(multiples(7, 5))
+x, y = (7, 5)
+print(list(x, x*y + 1, y))
+
 
 """10.Create a function that takes a list of numbers lst, a string s and return a list of numbers as per the following rules:
 "Asc" returns a sorted list in ascending order.
 "Des" returns a sorted list in descending order.
 "None" returns a list without any modification."""
 
-x =[4,3,2,1]
+x =[4,3,2,1],"Asc"
 
 
 y= sorted(x)
 z= sorted(x, reverse=True)
-print(y , z ,x)
+print(y=="Asc")*sorted(x) + (y=="Des") *sorted(x,revers=True) +(y=="None"*x)
 
