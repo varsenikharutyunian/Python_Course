@@ -24,18 +24,19 @@ print (sum(x))
 # [-1, -2, -3, -4, -5, -6] ➞ [-12, -9]
 # [0, 0] ➞ [0, 0]
 # Notes
-# Count 0 as an even number."""          ?
+# Count 0 as an even number."""          
 # num=[1,2,3,4,5,6]
 # sum1=sum(num)*num%2==0
 # sum2=sum(num)*num%2!=0
 
 # print(sum1)
 
-"""3. Create a function that takes a dictionary of objects like { "name": "John", "notes": [3, 5, 4] } and returns a dictionary of objects like { "name": "John", "top_note": 5 }.
-Examples
-top_note({ "name": "John", "notes": [3, 5, 4] }) ➞ { "name": "John", "top_note": 5 }
-top_note({ "name": "Max", "notes": [1, 4, 6] }) ➞ { "name": "Max", "top_note": 6 }
-top_note({ "name": "Zygmund", "notes": [1, 2, 3] }) ➞ { "name": "Zygmund", "top_note": 3 }"""
+# 3. Create a function that takes a dictionary of objects like 
+# and returns a dictionary of objects like 
+# Examples
+# top_note({ "name": "John", "notes": [3, 5, 4] }) ➞ { "name": "John", "top_note": 5 }
+# top_note({ "name": "Max", "notes": [1, 4, 6] }) ➞ { "name": "Max", "top_note": 6 }
+# top_note({ "name": "Zygmund", "notes": [1, 2, 3] }) ➞ { "name": "Zygmund", "top_note": 3 }
 
 
 
@@ -56,14 +57,14 @@ result = get_top_notes(data)
 
 print(result)
 
-"""4. Write a function that takes a list of numbers and returns a list with two elements:
-The first element should be the sum of all even numbers in the list.
-The second element should be the sum of all odd numbers in the list.
-Example
-sum_odd_and_even([1, 2, 3, 4, 5, 6]) ➞ [12, 9]
-# 2 + 4 + 6 = 12 and 1 + 3 + 5 = 9
-sum_odd_and_even([-1, -2, -3, -4, -5, -6]) ➞ [-12, -9])
-sum_odd_and_even([0, 0]) ➞ [0, 0])"""
+# 4. Write a function that takes a list of numbers and returns a list with two elements:
+# The first element should be the sum of all even numbers in the list.
+# The second element should be the sum of all odd numbers in the list.
+# Example
+# sum_odd_and_even([1, 2, 3, 4, 5, 6]) ➞ [12, 9]
+# # 2 + 4 + 6 = 12 and 1 + 3 + 5 = 9
+# sum_odd_and_even([-1, -2, -3, -4, -5, -6]) ➞ [-12, -9])
+# sum_odd_and_even([0, 0]) ➞ [0, 0])"""
 def sum_even_odd(numbers):
     even_sum = 0
     odd_sum = 0
@@ -78,26 +79,26 @@ result = sum_even_odd(numbers)
 print(result)
 
 
-"""5. You work for a manufacturer, and have been asked to calculate the total
-profit made on the sales of a product. You are given a dictionary containing 
-the cost price per unit (in dollars), sell price per unit (in dollars), 
-and the starting inventory. Return the total profit made, rounded to the nearest dollar.
-Examples
-profit({
-  "cost_price": 32.67,
-  "sell_price": 45.00,
-  "inventory": 1200
-}) ➞ 14796
-profit({
-  "cost_price": 225.89,
-  "sell_price": 550.00,
-  "inventory": 100
-}) ➞ 32411
-profit({
-  "cost_price": 2.77,
-  "sell_price": 7.95,
-  "inventory": 8500
-}) ➞ 44030"""
+# 5. You work for a manufacturer, and have been asked to calculate the total
+# profit made on the sales of a product. You are given a dictionary containing 
+# the cost price per unit (in dollars), sell price per unit (in dollars), 
+# and the starting inventory. Return the total profit made, rounded to the nearest dollar."""
+# Examples
+# profit({
+#   "cost_price": 32.67,
+#   "sell_price": 45.00,
+#   "inventory": 1200
+# }) ➞ 14796
+# profit({
+#   "cost_price": 225.89,
+#   "sell_price": 550.00,
+#   "inventory": 100
+# }) ➞ 32411
+# profit({
+#   "cost_price": 2.77,
+#   "sell_price": 7.95,
+#   "inventory": 8500
+# }) ➞ 44030"""
 
 profit={
   "cost_price": 32.67,
@@ -215,20 +216,12 @@ Examples
 word_builder(["g", "e", "o"], [1, 0, 2]) ➞ "ego"
 word_builder(["e", "t", "s", "t"], [3, 0, 2, 1]) ➞ "test"
 word_builder(["b", "e", "t", "i", "d", "a"], [1, 4, 5, 0, 3, 2]) ➞ "edabit"""
-# word = (["g", "e", "o"], [1, 0, 2]) 
-# x=["g", "e", "o"]
-# y=[1, 0, 2]
-# text " "
-# for i in [1, 0, 2]
-# print(txt+=)
-ist1=[1, 2,2, 3]
-list2=[5, 3,2, 2]
-list3=[7, 3,2, 2]
-# x=set(list1)&set(list2)&set(list3) 
-# &= intersection
-
-x=set(list1).intersection(set(list2)).intersection(set(list3))
-print (sum(x))
+x=["e", "t", "s", "t"]
+y=[3, 0, 2, 1]
+txt=" "
+for i in y:
+  txt+= x[i]
+print(txt)
 
 
 
