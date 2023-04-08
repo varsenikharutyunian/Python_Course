@@ -158,11 +158,11 @@ string_pairs("edabit") ➞ ["ed", "ab", "it"]
 string_pairs("airforces") ➞ ["ai", "rf", "or", "ce", "s*"]
 Notes
 Return [] if the given string is empty."""
-# x = ("airforces")
-# new_lst = []
-# for i in range(0, len(x), 2):
-#       new_lst.append(x[i : i+2])
-# print(new_lst)
+x = ("airforces")
+new_lst = []
+for i in range(0, len(x), 2):
+      new_lst.append(x[i : i+2])
+print(new_lst)
 """7. Create a function that takes two parameters and, if both parameters are strings, add them
 as if they were integers or if the two parameters are integers, concatenate them.
 Examples
@@ -199,7 +199,6 @@ else:
     
     
 
-
 """8. Write a function that does the following operations: adding, subtracting, dividing,
 or multiplying values. It is simply referred to as variable operation variable. Of course, t
 he variables have to be defined, but in this challenge the variables will be defined for you.
@@ -227,7 +226,7 @@ if isinstance(x[0], str) and isinstance(x[1], str):
               
           
 
-# """9. Check if the given string consists of only letters and spaces and if every letter is 
+#  """9. Check if the given string consists of only letters and spaces and if every letter is 
 # in lower case.
 # Examples
 # letters_only("PYTHON") ➞ False
