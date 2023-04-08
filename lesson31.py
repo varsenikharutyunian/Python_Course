@@ -24,17 +24,17 @@ print (sum(x))
 # [-1, -2, -3, -4, -5, -6] ➞ [-12, -9]
 # [0, 0] ➞ [0, 0]
 # Notes
-numbers=[1, 2, 3, 4, 5, 6]
-even_sum = 0
-odd_sum = 0
-for num in numbers:
-  if num % 2:
-    even_sum += num
-  else:
-    odd_sum += num
-    # return [even_sum, odd_sum]
-  # result = sum_even_odd(numbers)
-  print(([even_sum, odd_sum]))
+# numbers=[1, 2, 3, 4, 5, 6]
+# even_sum = 0
+# odd_sum = 0
+# for num in numbers:  ?
+#   if num % 2:
+#     even_sum += num
+#   else:
+#     odd_sum += num
+#     # return [even_sum, odd_sum]
+#   # result = sum_even_odd(numbers)
+#   print(([even_sum, odd_sum]))
   
 
 
