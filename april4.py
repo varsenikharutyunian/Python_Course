@@ -158,6 +158,7 @@ string_pairs("edabit") ➞ ["ed", "ab", "it"]
 string_pairs("airforces") ➞ ["ai", "rf", "or", "ce", "s*"]
 Notes
 Return [] if the given string is empty."""
+
 x = ("airforces")
 new_lst = []
 for i in range(0, len(x), 2):
@@ -214,16 +215,40 @@ The numbers and operation will be given as strings, and you should also return t
 If the answer is "undefined", return "undefined" (e.g. dividing by zero).
 For divide, go ahead and round down to an integer"""
 
-x=("1", "2", "add" )    
-if isinstance(x[0], str) and isinstance(x[1], str):
-    print(str(int(x[0])+int(x[1])))
-    y=("4", "5", "subtract")
-    if isinstance(y[0], str) and isinstance(y[1], str):
-        print(str(int(y[0])-int(y[1])))
-        z=("6", "3", "divide")
-        if isinstance(z[0], str) and isinstance(z[1], str):
-            print(str(int(z[0])/int(z[1])))
-              
+# x=("1", "2", "add" )    
+# if isinstance(x[0], str) and isinstance(x[1], str):
+#     print(str(int(x[0])+int(x[1])))
+#     y=("4", "5", "subtract")
+#     if isinstance(y[0], str) and isinstance(y[1], str):
+#         print(str(int(y[0])-int(y[1])))
+#         z=("6", "3", "divide")
+#         if isinstance(z[0], str) and isinstance(z[1], str):
+#             print(str(int(z[0])/int(z[1])))
+
+var1,var2,oper=("1", "0", "divide" )
+if not(var1.isnumeric() and var2.isnumeric()):
+    print("Please, enter numeric value")
+    exit()
+var1,var2=int(var1),int(var2)
+return_value="Undefined"
+if oper== "add":
+    return_value= var1+var2
+elif oper=="subtract":
+    return_value=var1-var2
+elif oper =="multiple":
+    return_value=var1*var2
+elif oper=="divide" and var2!=0:
+    return_value=var1//var2
+elif oper=="divide" and var2==0:
+    return_value="var2!=0"
+else:
+    return_value="Plese corect the operator name"
+print(str(return_value))
+    
+    
+    
+
+
           
 
 #  """9. Check if the given string consists of only letters and spaces and if every letter is 
