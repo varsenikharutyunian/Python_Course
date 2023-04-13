@@ -49,13 +49,13 @@ Examples
 "8754456321113213" ➞ "************3213"
 "35123413355523" ➞ "**********5523"""
 
-x ="1234123456785678"
+# x ="1234123456785678"
 # ete qarti erkarutyun@ 16 e
 # print(12*("*") + x[-4:])  
 #   erkrord exanak
-# y="35123413355523"
-print(len(x)-4) * "*"+ x[-4: ]
-print(result)
+y="35123413355523"
+print(len(y)-4) * "*"+ y[-4:]
+
 
 
 
@@ -63,6 +63,6 @@ print(result)
 and returns a string with the first and last name swapped."""
 
 name=input("enter name_surname ->")
-name=name.split()                        ?
+name=name.split()                        
 print(name[1] +" " +name[0])
-print(fstring)   
+# print(fstring)   
