@@ -238,7 +238,7 @@ def count_runs(func):
     return wrapper
 
 # Example usage
-# def my_function():
+ def my_function():
     print("Hello world!")
 
 my_function = count_runs(my_function)
