@@ -351,7 +351,7 @@ print(arithmetic_operation("12 * 21") )
 
 
 # 12.xndir  1-in lucum
-
+#  match case katarum e stugum ,ete c=b ,tpir a
 def func(a:int,b:int,c:int):
    match c==b:
        case True:
