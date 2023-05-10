@@ -227,23 +227,46 @@ is_vowel have run the input provide functions."""
 #   return lambda a:a*n
 # mydoubler =my_func(3)
 # print(mydoubler)
-def count_runs(func):
-    count = 0
+"""3. Write function which take a function as an input and run it and print how count how many times I have run the
+input provide functions."""
+
+
+def some_func():
+  count=0
+  def inner(*args,**kwargs):
+    nonlocal count
+    count+=1
+    print(count)
+    return func()
+  return inner  
+
+def func():
+  print("I am global func")
+
+x = some_func()
+x(func)
+x(func)
+
+
+
+# def count_runs():
+#     count = 0
     
-    def wrapper(*args, **kwargs):
-        nonlocal count
-        count += 1
-        return func(*args, **kwargs)
+#     def wrapper(*args, **kwargs):
+#         nonlocal count
+#         count += 1
+#         print(count)
+#     return func()
     
-    return wrapper
+#     return wrapper
 
-# Example usage
- def my_function():
-    print("Hello world!")
+# # Example usage
+#  def my_function():
+#    print("Hello world!")
 
-my_function = count_runs(my_function)
+# my_function = count_runs(my_function)
 
-my_function() # prints "Hello world!"
-print("Function has been run", my_function.count, "times") # prints "Function has been run 1 times"
-my_function() # prints "Hello world!"
-print("Function has been run", my_function.count, "times") # prints "Function has been run 2 times"
+# my_function() # prints "Hello world!"
+# print("Function has been run", my_function.count, "times") # prints "Function has been run 1 times"
+# my_function() # prints "Hello world!"
+# print("Function has been run", my_function.count, "times") # prints "Function has been run 2 times"
