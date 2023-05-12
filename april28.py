@@ -395,18 +395,22 @@ Notes
     Remember to return a string.
     The first phrase is always "Loves me"."""
     
-# def loves_me(n):
-#     for i in range(n):
-#         if n%2==0:
-#         return "loves  me"
-#         else:
-#             word="Loves me not"
-        
-#         return " , ".join([*word[:len(word)-1],word[-1].upper()])
-
-
 def loves_me(n):
-    a = ["Loves me" if i%2==0 else "Loves me not" for i in range(n)]
-    return ", ".join([*a[:len(a)-1],a[-1].upper()])
+    result = ""
+    for i in range(1, n+1):
+        if i % 2 == 1:
+            result += "Loves me"
+        else:
+            result += "Loves me not"
+        if i != n:
+            result += ", "
+    result = result[:-5] + result[-5:].upper()  # capitalize last phrase
+    return result
+print(loves_me(30))
 
-print(loves_me(3))
+
+# def loves_me(n):
+#     a = ["Loves me" if i%2==0 else "Loves me not" for i in range(n)]
+#     return ", ".join([*a[:len(a)-1],a[-1].upper()])
+
+# print(loves_me(3))
