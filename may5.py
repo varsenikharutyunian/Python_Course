@@ -384,13 +384,16 @@ count_datatypes("Hello", "Bye", True, True, False, {"1": "One", "2": "Two"}, [1,
 count_datatypes(4, 21, ("ES", "EN"), ("a", "b"), False, [1, 2, 3], [4, 5, 6]) ➞ [2, 0, 1, 2, 2, 0]"""
 
 def count_datatypes(*args):
-    d={int:0 ,str:1, bool:2, list:3, tuple:4, dict:5}
-    for i in args:
-        if type(i) in d:
-            d[type(i)]+=1
-            
-        
-    return list(d.values())
+    data_types = [int, str, bool, list, tuple, dict]
+    counts = [0] * len(data_types)
+
+    for arg in args:
+        for i, data_type in enumerate(data_types):
+            if isinstance(arg, data_type):
+                counts[i] += 1
+
+    return counts
+
 print(count_datatypes(1, 45, "Hi", False))
         
         
@@ -479,9 +482,29 @@ def multiplication_table(n):
 
 print( multiplication_table(1))
 print(multiplication_table(3))
+"""19.Sharing is Caring
+Given a list of numbers, create a function that removes 25% from every number in the list except the smallest number,
+and adds the total amount removed to the smallest number.
+Examples
 
+show_the_love([4, 1, 4]) ➞ [3, 3, 3]
 
+show_the_love([16, 10, 8]) ➞ [12, 7.5, 14.5]
 
+show_the_love([2, 100]) ➞ [27, 75]
+
+Notes
+
+There will only be one smallest number in a given list."""
+
+def show_the_love(lst):
+    remove_lst=[]
+    for i in lst:
+        remove_lst.append(i- i*25/100)
+        return remove_lst
+    
+
+print(show_the_love([4, 1, 4]))
 
     
         
