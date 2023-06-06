@@ -285,4 +285,4 @@ def solution(inputString):
 #     return True
 
 print(solution("172.16.254.1"))
-# print(solution("0.254.255.0"))
+print(solution("0.254.255.0"))
