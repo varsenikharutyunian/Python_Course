@@ -404,7 +404,7 @@ def loves_me(n):
             result += "Loves me not"
         if i != n:
             result += ", "
-    result = result[:-5] + result[-5:].upper()  # capitalize last phrase
+    result = result[:-9] + result[-9:].upper()  # capitalize last phrase
     return result
 print(loves_me(30))
 
@@ -414,3 +414,5 @@ print(loves_me(30))
 #     return ", ".join([*a[:len(a)-1],a[-1].upper()])
 
 # print(loves_me(3))
+
+print(loves_me)
