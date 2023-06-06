@@ -465,7 +465,7 @@ class Country:
     
     def check_if_big(self):
         return self.population > 250_000_000 or self.area > 3_000_000
-    
+            
     def compare_pd(self, other_country):
         if self.population / self.area > other_country.population / other_country.area:
             return f"{self.name} has a larger population density than {other_country.name}"
