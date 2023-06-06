@@ -4,10 +4,10 @@
 # [1, 2, 3, 4, 5] ➞ [5, 1, 2, 3, 4]
 # [6, 5, 8, 9, 7] ➞ [7, 6, 5, 8, 9]
 # [20, 15, 26, 8, 4] ➞ [4, 20, 15, 26, 8]"""
-# x=[6, 5, 8, 9, 7]
-# x.insert(0,x[-1])
-# x.pop()
-# print(x)
+x=[6, 5, 8, 9, 7]
+x.insert(0,x[-1])
+x.pop()
+print(x)
 
 # """2. Create a function that inverts the rgb values of a given tuple.
 # Examples
@@ -19,9 +19,9 @@
 # Notes
 # Must return a tuple.
 # 255 is the max value of a single color channel."""
-# # color_invert=((0, 0, 0))
-# # color_invert=(0,0,0)
-# # print(invert_rgb((255,255,255)))
+# color_invert=((0, 0, 0))
+# color_invert=(0,0,0)
+# print(invert_rgb((255,255,255)))
 
 
 
@@ -31,11 +31,11 @@
 # find_bob(["Jimmy", "Layla", "Bob"]) ➞ 2
 # find_bob(["Bob", "Layla", "Kaitlyn", "Patricia"]) ➞ 0
 # find_bob(["Jimmy", "Layla", "James"]) ➞ -1"""
-# # name= (["Bob", "Layla", "Kaitlyn", "Patricia"])
-# # boolValue= "Bob" in name and name.index("Bob")
- 
-# # #  (name!=("Bob")*(-1)))
-# # print((not boolValue)*("-1")+ boolValue)
+name= (["Bob", "Layla", "Kaitlyn", "Patricia"])
+boolValue= "Bob" in name and name.index("Bob")
+
+(name!=("Bob")*(-1))
+print((not boolValue)*("-1")+ boolValue)
 # def find_bob(names):
 #     if "Bob" in names:
 #         return names.index("Bob")
