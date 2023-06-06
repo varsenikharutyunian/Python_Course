@@ -566,6 +566,7 @@ def pluralize(lst):
     lst1=set(lst)
     lst2=lst1.difference()
     for i in lst2:
+    
         return {i[:]+"s",}
     # i+=1
       
@@ -607,18 +608,18 @@ censor_string("The cow jumped over the moon.", ["cow", "over"], "*"), "The *** j
 
 censor_string("Why did the chicken cross the road?", ["Did", "chicken", "road"], "*") ➞ "Why *** the ******* cross the ****?"""
 
-def censor_string(txt, lst, char):
-    censor_string.
+# def censor_string(txt, lst, char):
+#     censor_string
     
     
-    for i  in  txt:
-        for j in lst:
-            if i==j:
-                return 
+#     for i  in  txt:
+#         for j in lst:
+#             if i==j:
+#                 return 
                 
                 
-  censor_string= "Today is a Wednesday!"
-  print(" ".join())     
+#   censor_string= "Today is a Wednesday!"
+#   print(" ".join())     
     
             
 # print(censor_string("Today is a Wednesday!", ["Today", "a"]) )
