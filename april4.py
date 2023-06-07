@@ -12,13 +12,34 @@
 # name=input("enter name  >> ")
 # # name =("Darth Vader","Leia","Han","R2D2" )
 # if name=="Darth Vader":
-#   print("Luke, I am your father.")
+#     print("Luke, I am your father.")
 # elif name=="Leia":
 #     print("Luke, I am your sister.")  
 # elif name=="Han":
 #     print("Luke, I am your brother in law.")
 # else:             
 #     print("droid")
+    
+# def relation_to_luke(a:str):
+#     b="Luke, I am your"
+#     c="father."
+#     d="sister."
+#     k="brother in law."
+#     if a== "Darth Vader":
+#         return f"{b}, {c}"
+#     elif a== "Leia":
+#         return f"{b}, {d}"
+#     elif a== "Han":
+#         return f"{b}, {k}"
+#     else:
+#         return "droid"
+# print(relation_to_luke("Darth Vader"))
+# print(relation_to_luke("Leia"))
+# print(relation_to_luke("Han"))
+# print(relation_to_luke("Hn"))
+    
+        
+    
     
     
 # """2. Create a function that takes damage and speed (attacks per second) and returns the amount 
@@ -37,22 +58,18 @@
 # print(calculate_damage(100, 1, 60))  
 # print(calculate_damage(2, 100, 3600)) 
 
-# my_list=(40, 5, "second")
-
-# for i in my_list:
-#     if my_list[2]=="second":?
-#         print(40*5)
-#     elif my_list[2]==":
-#         print(60)
-#     else:
-#         print(*3600)
-    
-
-
-        
-        
-
-
+# def damage(a:int,b:int,c:str):
+#     z=a*b
+#     if c=="second":
+#         return z
+#     elif c=="minute":
+#         return z*60
+#     elif c== "hour":
+#         return z*3600
+            
+# print(damage(40, 5, "second"))
+# print(damage(100, 1, "minute"))
+# print(damage(2, 100, "hour"))
 
 
 # """3. Create a function that takes a list of strings and integers, and filters out the 
@@ -71,23 +88,38 @@
 
 # 1-in lutsum
 x =(["A", 0, "Edabit", 1729, "Python", "1729"])
-new_lst=[]
-for i in x:
-    if type(i)==int:
-        new_lst.append(i)
-print(new_lst)
+# new_lst=[]
+# for i in x:
+#     if type(i)==int:
+#         new_lst.append(i)
+# print(new_lst)
+
+
+# 2-rd luc
+# def my_list(lst):
+#     filter_lst =[]
+#     while True:
+#         for i in lst:
+#             if type(i)==int:
+#                 filter_lst.append(i)
+#         return filter_lst
+                
+# print(my_list([1, 2, 3, "a", "b", 4]))
+# print(my_list(["A", 0, "Edabit", 1729, "Python", "1729"]))
+
+            
     
-# 2-rd lutsum
+# 3-rd lutsum
 # print(list(filter(lambda x: isinstance(x, int), list1)))
 """4.Create a function that takes a number as an argument and returns True or False depending on 
- whether the number is symmetrical or not.A number is symmetrical when it is the same as its reverse.
- Examples
+whether the number is symmetrical or not.A number is symmetrical when it is the same as its reverse.
+Examples
 is_symmetrical(7227) ➞ True
 is_symmetrical(12567) ➞ False
 is_symmetrical(44444444) ➞ True
 is_symmetrical(9939) ➞ False
 is_symmetrical(1112111) ➞ True"""
- 
+
 # 1-in lutsum
 
 # def is_symmetrical_num(n):
@@ -98,12 +130,25 @@ is_symmetrical(1112111) ➞ True"""
 # print(is_symmetrical_num(9939))
 # 2-rt lutsum
 
-n=input("Enter simetrical_num >  ")
-if str(n)==str(n)[::-1]:
-    print("True")
-else:
-    print("False")
+# n=input("Enter simetrical_num >  ")
+# if str(n)==str(n)[::-1]:
+#     print("True")
+# else:
+#     print("False")
+
+#  3rd lucum
     
+def is_symmetrical_num(n):
+    a=str(n)
+    if a[0:] == a[ ::-1]:
+        return True
+    else:
+        return False
+
+print(is_symmetrical_num(7227))
+print(is_symmetrical_num(9939))
+print(is_symmetrical_num(12567))
+
 """5.Create a function that changes all the elements in a list as follows:
 Add 1 to all even integers, nothing to odd integers.
 Concatenates "!" to all strings and make the first letter of the word a capital letter.
@@ -159,11 +204,34 @@ string_pairs("airforces") ➞ ["ai", "rf", "or", "ce", "s*"]
 Notes
 Return [] if the given string is empty."""
 
-x = ("airforces")
-new_lst = []
-for i in range(0, len(x), 2):
-      new_lst.append(x[i : i+2])
-print(new_lst)
+# 1-in lucum
+
+# x = ("airforces")
+# new_lst = []
+# for i in range(0, len(x), 2):
+#     new_lst.append(x[i : i+2])
+# print(new_lst)
+
+#  2-rd lucum
+def string_pairs(x):
+    if len(x)==0:
+        return []
+    
+    new_lst=[]
+    for i in range(0,len(x),2):
+        if i+1 < len(x):
+            new_lst.append(x[i:i+2])
+            
+        else:
+            new_lst.append(x[i] + "*")
+
+    return new_lst
+
+print(string_pairs("mubashir"))   
+print(string_pairs("edabit"))
+print(string_pairs("airforces"))
+
+
 """7. Create a function that takes two parameters and, if both parameters are strings, add them
 as if they were integers or if the two parameters are integers, concatenate them.
 Examples
@@ -245,11 +313,7 @@ else:
     return_value="Plese corect the operator name"
 print(str(return_value))
     
-    
-    
 
-
-          
 
 #  """9. Check if the given string consists of only letters and spaces and if every letter is 
 # in lower case.
@@ -271,7 +335,6 @@ if x and y:
     print("True")
 else:
     print("False")
- 
 """10. Write a function that takes a list and determines whether it's strictly increasing, 
 strictly decreasing, or neither.
 Examples
