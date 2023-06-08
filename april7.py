@@ -10,9 +10,21 @@ say_hello_bye("jose", 0) ➞ "Bye Jose"""
 #     print("Hello"+ " " + name.capitalize())
 # elif num==0:
 #     print("Bye"+ " " + name.capitalize())
+
+# def say_hello_bye(name,num):
+#     if name=="alon" and num == 1:
+#         return f"Hello {name.capitalize()}"
+#     if name=="Tomi" and num == 0:
+#         return f"Bye {name}"
+#     else:
+#         return f"Bye {name.capitalize()}"
+    
+# print(say_hello_bye("alon", 1))
+# print(say_hello_bye("Tomi", 0))
+# print(say_hello_bye("jose", 0))
     
 """2. Create a function that takes a list (slot machine outcome) and returns True if all elements 
-  in the list are identical, and False otherwise. The list will contain 4 elements.
+in the list are identical, and False otherwise. The list will contain 4 elements.
 Examples
 test_jackpot(["@", "@", "@", "@"]) ➞ True
 test_jackpot(["abc", "abc", "abc", "abc"]) ➞ True
@@ -65,6 +77,7 @@ The input integer will be positive.
 A factor is a number that evenly divides into another number without leaving a remainder. 
 The second example is a factor of 12, because 12 / 2 = 6, with remainder 0."""
 
+
 # def factorize(num):
 #     factors = []
 #     for i in range(1, num + 1):
@@ -72,7 +85,6 @@ The second example is a factor of 12, because 12 / 2 = 6, with remainder 0."""
 #             factors.append(i)
 #     return factors
 # print(factorize(12))
-
 """5. Create a function that returns the number of palindrome numbers in a specified range (inclusive).
 For example, between 8 and 34, there are 5 palindromes: 8, 9, 11, 22 and 33. 
 Between 1550 and 1552 there is exactly one palindrome: 1551.
@@ -133,20 +145,20 @@ print(vowel_first("abcde"))
 
 
 """7. Create a function that takes a string as an argument and returns a coded (h4ck3r 5p34k) version of the string.
- Examples
- hacker_speak("javascript is cool") ➞ "j4v45cr1pt 15 c00l"
- hacker_speak("programming is fun") ➞ "pr0gr4mm1ng 15 fun"
- hacker_speak("become a coder") ➞ "b3c0m3 4 c0d3r"
- Notes
- In order to work properly, the function should replace all "a"s with 4, "e"s with 3, "i"s with 1, 
- "o"s with 0, and "s"s with 5."""
+Examples
+hacker_speak("javascript is cool") ➞ "j4v45cr1pt 15 c00l"
+hacker_speak("programming is fun") ➞ "pr0gr4mm1ng 15 fun"
+hacker_speak("become a coder") ➞ "b3c0m3 4 c0d3r"
+Notes
+In order to work properly, the function should replace all "a"s with 4, "e"s with 3, "i"s with 1, 
+"o"s with 0, and "s"s with 5."""
 
 # def hacker_speak(some_string:str):
 #     dic={"a":"4",
-#          "e":"3",
-#          "i":"1",
-#          "o":"0",             ?
-#          "s":"5"}
+#         "e":"3",
+#         "i":"1",
+#         "o":"0",             
+#         "s":"5"}
 #     for i in dic:
 #         return some_string.replace(i,dic[i])
 # print(hacker_speak("javascript is cool") )
@@ -177,7 +189,7 @@ return_end_of_number(412) ➞ "412-TH"""
 # def end_of_number(num):
 #     if num % 100 in [11, 12, 13]:
 #         name= "th".upper()
-   
+
 #     elif num%10==1:
 #         name= "st".upper()
 #     elif num%10==2:
@@ -234,10 +246,11 @@ For the formulae to convert back and forth, check the Resources tab."""
 # Notes
 # You can assume all input seqeuences will be valid."""
 
+# 1-in lucum
 
 # input_txt="GUGU"
 
-# mydict={"A": "U", "U":"A", "C":"G", "G":"C"}       1-in lucum
+# mydict={"A": "U", "U":"A", "C":"G", "G":"C"}       
 
 # converted_txt = " "
 # for i in input_txt:
@@ -245,11 +258,11 @@ For the formulae to convert back and forth, check the Resources tab."""
 # print(converted_txt[::-1])
 
 
-# 
 
+# # 2-rd lucum
 # def reverse_complement(txt):
 #     complement={"A": "U", "U":"A", "C":"G", "G":"C"}
-#     revers_complement = " "                                    2-rd lucum
+#     revers_complement = " "                                    
 #     for i in txt:
 #         revers_complement +=complement[i]
 #     return revers_complement[::-1]
@@ -290,10 +303,10 @@ For the formulae to convert back and forth, check the Resources tab."""
 
 # 
 # test_dict = {"a" : 4, "e" : 3, "i" : 1, "o":0, "s":5}
-  
+
 # print("The original dictionary : " + str(test_dict))
 # res =dict(reversed(list(test_dict.items())))
-  
+
 # # printing reversed order dictionary
 # print("The reversed order dictionary : " + str(res) )
 
@@ -353,11 +366,11 @@ print(arithmetic_operation("12 * 21") )
 # 12.xndir  1-in lucum
 #  match case katarum e stugum ,ete c=b ,tpir a
 def func(a:int,b:int,c:int):
-   match c==b:
-       case True:
-           return a
-       case False:
-           return  b
+    match c==b:
+        case True:
+            return a
+        case False:
+            return  b
 a,b,c=1,2,2
 print(func(a,b,c))
 
