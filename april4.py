@@ -19,7 +19,7 @@
 #     print("Luke, I am your brother in law.")
 # else:             
 #     print("droid")
-    
+
 # def relation_to_luke(a:str):
 #     b="Luke, I am your"
 #     c="father."
@@ -257,14 +257,14 @@ All parameters will either be strings or integers."""
 
 # 2-rd lutsum
 
-x=("1",2)
-for i in x:
-    if isinstance(x[0], str) and isinstance(x[1], str):
-        print(str(int(x[0]) + int(x[1])))
-    elif isinstance(x[0], int) and isinstance(x[1], int):
-        print( str(x[0]) + str(x[1]))
-else:
-    print("None")
+# x=("1",2)
+# for i in x:
+#     if isinstance(x[0], str) and isinstance(x[1], str):
+#         print(str(int(x[0]) + int(x[1])))
+#     elif isinstance(x[0], int) and isinstance(x[1], int):
+#         print( str(x[0]) + str(x[1]))
+# else:
+#     print("None")
     
     
 
@@ -293,25 +293,38 @@ For divide, go ahead and round down to an integer"""
 #         if isinstance(z[0], str) and isinstance(z[1], str):
 #             print(str(int(z[0])/int(z[1])))
 
-var1,var2,oper=("1", "0", "divide" )
-if not(var1.isnumeric() and var2.isnumeric()):
-    print("Please, enter numeric value")
-    exit()
-var1,var2=int(var1),int(var2)
-return_value="Undefined"
-if oper== "add":
-    return_value= var1+var2
-elif oper=="subtract":
-    return_value=var1-var2
-elif oper =="multiple":
-    return_value=var1*var2
-elif oper=="divide" and var2!=0:
-    return_value=var1//var2
-elif oper=="divide" and var2==0:
-    return_value="var2!=0"
-else:
-    return_value="Plese corect the operator name"
-print(str(return_value))
+# var1,var2,oper=("1", "0", "divide" )
+# if not(var1.isnumeric() and var2.isnumeric()):
+#     print("Please, enter numeric value")
+#     exit()
+# var1,var2=int(var1),int(var2)
+# return_value="Undefined"
+# if oper== "add":
+#     return_value= var1+var2
+# elif oper=="subtract":
+#     return_value=var1-var2
+# elif oper =="multiple":
+#     return_value=var1*var2
+# elif oper=="divide" and var2!=0:
+#     return_value=var1//var2
+# elif oper=="divide" and var2==0:
+#     return_value="var2!=0"
+# else:
+#     return_value="Plese corect the operator name"
+# print(str(return_value))
+
+def operation(a:str, b:str ,operation ):
+    if operation=="add":
+        return int(a)+int(b)
+    elif operation== "subtract":
+        return int(a)-int(b)
+    elif operation== "divide" and b!=0:
+        return int(a)//int(b)
+    elif operation== "divide" and b==0:
+        return "undefined"
+print(operation("1", "2", "add" ))
+print(operation("4", "5", "subtract"))
+print(operation("6", "3", "divide"))   
     
 
 
@@ -347,10 +360,36 @@ The last example does NOT count as strictly increasing, since 1-indexed 1 is not
 than the 0-indexed 1.
 Input lists have a minimum length of 2."""
 
-check=input("Enter check >")
-if check[0]< check[1]<check[2]:
-    print("increasing")
-elif check[0]> check[1]>check[2]:
-    print("decreasing")
-else:
-    print("neither")
+
+# check=input("Enter check >")
+# if check[0]< check[1]<check[2]:
+#     print("increasing")
+# elif check[0]> check[1]>check[2]:
+#     print("decreasing")
+# else:
+#     print("neither")
+
+
+def check(lst):
+    increasing = decreasing = True
+
+    for i in range(len(lst) - 1):
+        if lst[i] >= lst[i + 1]:
+            increasing = False
+        if lst[i] <= lst[i + 1]:
+            decreasing = False
+
+    if increasing:
+        return " increasing"
+    elif decreasing:
+        return " decreasing"
+    else:
+        return "neither"
+    
+    
+print(check([1, 2, 3]))
+print(check([3, 2, 1]))
+print(check([1, 2, 1]))
+print(check([1, 1, 2]))
+
+

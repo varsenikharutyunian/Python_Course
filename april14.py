@@ -17,7 +17,6 @@ All array items are of the type bool (true or false)."""
 # print(count_true([True, False, False, True, False]))
 # print(count_true([False, False, False, False]))
 # print(count_true([]))
-
 """2. Create a function that validates whether a number n is within the bounds of lower and upper. 
 Return false if n is not an integer.
 Examples
@@ -27,7 +26,7 @@ intWithinBounds(4.5, 3, 8) ➞ false
 Notes
 The term "within bounds" means a number is considered equal or greater than a lower bound and lesser (but not equal) 
 to an upper bound, (see example #2).
-Bounds will be always given as integers."""
+# Bounds will be always given as integers."""
 
 
 # def intWithinBounds(n,lower,upper):
@@ -67,7 +66,7 @@ longestTime(15, 955, 59400) ➞ 59400"""
 # print(longestTime(h, m, s))
 
 
-# """4. Create a function that takes the month and year (as integers) and returns the number of days in that month.
+"""4. Create a function that takes the month and year (as integers) and returns the number of days in that month.
 # Examples
 # days(2, 2018) ➞ 28
 # days(4, 654) ➞ 30
@@ -170,7 +169,7 @@ print(matrix(3, 2, 3))
 # # 2-rd lucum
 # def matrix(a, b, c):
 #     ret_list=[[c for j in range(b)] for i in range(a)]
-   
+
 #     return ret_list
     
 # print(matrix(3, 2, 3))
@@ -183,7 +182,7 @@ print(matrix(3, 2, 3))
 """8. Given a string of numbers separated by a comma and space, return the product of the numbers
 
 Examples
-multiplyNums("2, 3") 
+multiplyNums("2, 3") > 6
 multiplyNums("1, 2, 3, 4") ➞ 24
 multiplyNums("54, 75, 453, 0") ➞ 0
 multiplyNums("10, -2") ➞ -20
@@ -209,17 +208,17 @@ firstPlace("proeNeoOJGnfl") ➞ "l"
 Notes
 Return "No car available" if there is no car on the road and "No road available" if there is no road."""
 
-def firstPlace(road_cars:str)->str:
-    if not road_cars:
-        return "No road"
-    x=road_cars.replace("=","")
-    if not x.isalpha():
-        return "wrong input string"
-    if not x:
-        return  "No cars"
-    return x[-1]
+# def firstPlace(road_cars:str)->str:
+#     if not road_cars:
+#         return "No road"
+#     x=road_cars.replace("=","")
+#     if not x.isalpha():
+#         return "wrong input string"
+#     if not x:
+#         return  "No cars"
+#     return x[-1]
 
-print(firstPlace("====b===O===e===U=A=="))
+# print(firstPlace("====b===O===e===U=A=="))
 
 """10. Create a function that takes an array of numbers between 1 and 10 (excluding one number) and returns the missing number.
 Examples

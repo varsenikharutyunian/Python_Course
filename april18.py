@@ -4,7 +4,7 @@
 #     if param1 >= -1000 and param1<=1000 and param2 >= -1000 and param2<=1000:
 #         return param1+param2
 
- 
+
 # print(solution(1,2))
 
 # """ xndir 2"""
@@ -33,9 +33,8 @@ Example
     For inputString = "abac", the output should be
     solution(inputString) = false;
     For inputString = "a", the output should be
-    solution(inputString) = true."""
- 
- 
+    solution(inputString) = true.""" 
+
 #  -in lucum
 # def solution(inputString):
 #     rev = '' .join(reversed(inputString))
@@ -190,7 +189,7 @@ mydoubler =my_func(3)
 # num1=sorted(numbers_tuple)
 # num=sorted(numbers)
 # print(num,num1)
- 
+
 #  string_number_value =["34521"]  ?
 # #  
 # sorted_string_number=sorted(string_number_value)
@@ -202,10 +201,10 @@ mydoubler =my_func(3)
 # word ="paper"
 # print(len(word))
 # words=["bannana","pie","Washington","book"]
-# # print(sorted(words, key=len))
+# print(sorted(words, key=len))
 # print(sorted(words,key=str.lower))
 
-       
+
 # """2. Using sorted() function, reverse parameter and lambda sort the tuples in the list based on the last character of the 
 # second items in reverse order.
 # lst=[(19542209, "New York") ,(4887871, "Alabama"), (1420491, "Hawaii"), (626299, "Vermont"), (1805832, "West Virginia"), (39865590, "California")]

@@ -1,9 +1,8 @@
 import random
 
 
-board= ["*","*","*",
-       "*","*","*",
-       "*","*","*" ]
+board= ["*","*","*","*","*","*","*","*","*" ]
+        
 currentPlayer = "X"
 winner = None
 gameRunning = True
@@ -14,7 +13,7 @@ def printBoard(board):
     print( board[0] + " " + board[1]  + " " + board[2])
     print( board[3] + " " + board[4]  + " " + board[5])
     print( board[6] + " " +  board[7] + " " + board[8])
-# printBoard(board)
+
 
 
 # player input
@@ -88,12 +87,15 @@ def switchPlayer():
         
 # #  computer
 def computer(board):
+
     while currentPlayer == "0":
         position = random.randint(0 , 8)
         if board[position] == "*":
             board[position] = "0"
             switchPlayer()
         
+        
+    
 
 # check for win or tie again
 while gameRunning:

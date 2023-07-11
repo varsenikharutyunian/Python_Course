@@ -52,10 +52,7 @@ picture = ["abc",
 
 the output should be
 
-solution(picture) = ["*****",
-                     "*abc*",
-                     "*ded*",
-                     "*****"]"""
+solution(picture) = ["*****","*abc*",*ded*","*****"]"""
 
 
 def solution(picture):

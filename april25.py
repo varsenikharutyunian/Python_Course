@@ -1,4 +1,5 @@
-"""icket numbers usually consist of an even number of digits. A ticket number is considered lucky if the sum of the first half of the digits is equal to the sum of the second half.
+"""ticket numbers usually consist of an even number of digits. A ticket number is considered lucky if the sum 
+of the first half of the digits is equal to the sum of the second half.
 
 Given a ticket number n, determine if it's lucky or not.
 
@@ -49,17 +50,17 @@ Given a dictionary of the stolen items and a string in lowercase representing th
 Note that the first letter of the name in the return statement is capitalized.
 Examples
 
- items = {
-  "tv": 30,
-  "timmy": 20,
-  "stereo": 50,
+items = {
+"tv": 30,
+"timmy": 20,
+"stereo": 50,
 } ➞ "Timmy is gone..."
 # Timmy is in the dictionary.
 
 
- items = {
-  "tv": 30,
-  "stereo": 50,
+items = {
+"tv": 30,
+"stereo": 50,
 } ➞ "Timmy is here!"
 # Timmy is not in the  dictionary.
 
@@ -80,11 +81,12 @@ status= find_it(items,name)
 print(status)
 
 
-"""5.Create a function that takes the number of wins, draws and losses and calculates the number of points a football team has obtained so far.
+"""5.Create a function that takes the number of wins, draws and losses and calculates the number of points 
+a football team has obtained so far.
 
-    wins get 3 points
-    draws get 1 point
-    losses get 0 points
+wins get 3 points
+draws get 1 point
+ losses get 0 points   
 
 Examples
 
@@ -237,16 +239,28 @@ Notes
     All inputs will be in the correct format.
     Strings on ticket are not always the same length."""
     
-#  def lottery(ticket, win):
-# lottery=([["KG", 80], ["NTBBVZ", 79], ["CI", 73], ["AGXMEE", 74], ["IU", 68], ["VOSP" , 84]], 1)
-# unicode_val = ord("KG")
-# def lottery(ticket, win):
-#     result = sum([1 for s, n in ticket if chr(n) in s])
-#     return {}.format('Winner!' if result >= win else 'Loser!')
+def lottery(ticket, win):
+    mini_wins = 0
 
-# print(lottery([["YYW", 70], ["WXK", 65], ["RPDI", 88]], 2)) # Loser!
-# print(lottery([["KG", 80], ["NTBBVZ", 79], ["CI", 73], ["AGXMEE", 74], ["IU", 68], ["VOSP" , 84]], 1)) # Winner!
-# print(lottery([["ZSAMZB", 81], ["XWWCXP", 72], ["SYBRQOHP", 88], ["HJSVV", 75]], 1)) # Loser!
+    for sublist in ticket:
+        string, number = sublist
+        for char in string:
+            if ord(char) == number:
+                mini_wins += 1
+                break
+
+    if mini_wins >= win:
+        return "Winner!"
+    else:
+        return "Loser!"
+
+# Test the function
+print(lottery([["YYW", 70], ["WXK", 65], ["RPDI", 88]], 2))  # Loser!
+print(lottery([["KG", 80], ["NTBBVZ", 79], ["CI", 73], ["AGXMEE", 74], ["IU", 68], ["VOSP" , 84]], 1))  # Winner!
+print(lottery([["ZSAMZB", 81], ["XWWCXP", 72], ["SYBRQOHP", 88], ["HJSVV", 75]], 1))  # Loser!
+
+
+
 
 """13.Create a class that takes the following four arguments for a particular football player:
 
@@ -263,11 +277,11 @@ Also, create three functions for the class that returns the following strings:
 
 Examples
 
- p1 = player("David Jones", 25, 175, 75)
+p1 = player("David Jones", 25, 175, 75)
 
- p1.get_age() ➞ "David Jones is age 25"
- p1.get_height() ➞ "David Jones is 175cm"
- p1.get_weight() ➞ "David Jones weighs 75kg"
+p1.get_age() ➞ "David Jones is age 25"
+p1.get_height() ➞ "David Jones is 175cm"
+p1.get_weight() ➞ "David Jones weighs 75kg"
 
 Notes
 
@@ -454,15 +468,15 @@ Notes
     Each byte must be seperated by a space.
     All alpha hex characters must be lowercase."""
     
-# def convert_to_hex(txt):
-#     hexa= ''
-#     for i in range(len(txt):
-#         character=txt[i]
-#         value=ord(character)
-#         part = hex(value).lstrip("0x").rstrip("L")
-#         hexa+=part
-#         return hexa
-#     printconvert_to_hex("hello world")
+def convert_to_hex(txt):
+    hexa= ''
+    for i in range(len(txt)):
+        character=txt[i]
+        value=ord(character)
+        part = hex(value).lstrip("0x").rstrip("L")
+        hexa+=part
+        return hexa
+print(convert_to_hex("hello world"))
         
         
 # def convert_to_hex(txt):
@@ -471,7 +485,7 @@ Notes
 #         hex_val = hex(ord(i))[2:]  # remove the '0x' prefix from the hex string
 #         hex_str += hex_val + ' '
 #     return hex_str.strip()  # remove the trailing space from the hex string
-      
+
 # print(convert_to_hex("hello world"))
 
 
@@ -486,34 +500,22 @@ uncensor("abcd", "") ➞ "abcd"
 
 uncensor("*PP*RC*S*", "UEAE") ➞ "UPPERCASE"""
 
-# sxal
-# def uncensor(txt, vowels):
-#     vowels_index=0
-#     for i in range(len(txt)):
-#         if i=="*":
-#             for j in vowels:
-#                 return txt.replace(i,j)
-#             vowels_index+=1
-    
-        # j=j[0]+1
-        # if len(j)==0:
-        #     return txt
-# print(uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo"))  
-# chicht
-# def uncensor(txt: str, vowels: str) -> str:
-#     uncensored_str = ''
-#     vowel_index = 0
-#     for i in txt:
-#         if i == '*':
-#             uncensored_str += vowels[vowel_index]
-#             vowel_index += 1
-#         else:
-#             uncensored_str += i
-#     return uncensored_str
-   
+#
 
-# print(uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo")) 
-# print(uncensor("abcd","")) 
+def uncensor(txt: str, vowels: str) -> str:
+    uncensored_str = ''
+    vowel_index = 0
+    for i in txt:
+        if i == '*':
+            uncensored_str += vowels[vowel_index]
+            vowel_index += 1
+        else:
+            uncensored_str += i
+    return uncensored_str
+
+
+print(uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo")) 
+print(uncensor("abcd","")) 
         
 """20.Using markdown, it's possible to format links such as https://edabit.com/challenges, into something tidier like this. Notice how the text "Go to the challenges!" appears when hovering over the link.
 
@@ -562,14 +564,30 @@ Notes
     Only focus on whether or not to add an s to the ends of words.
     All tests will be valid."""
     
-def pluralize(lst):
-    lst1=set(lst)
-    lst2=lst1.difference()
-    for i in lst2:
+# def pluralize(lst):
+#     lst1=set(lst)
+#     lst2=lst1.difference()
+#     for i in lst2:
     
-        return {i[:]+"s",}
-    # i+=1
-      
+#         return {i[:]+"s",}
+#     i+=1
+def pluralize(words):
+    result = set()
+
+    for word in words:
+        if words.count(word) > 1:
+            result.add(word + "s")
+        else:
+            result.add(word)
+
+    return result
+
+# Test the function
+print(pluralize(["cow", "pig", "cow", "cow"]))  # { "cows", "pig" }
+print(pluralize(["table", "table", "table"]))  # { "tables" }
+print(pluralize(["chair", "pencil", "arm"]))    # { "chair", "pencil", "arm" }
+
+
         
 print(pluralize(["cow", "pig", "cow", "cow"]))
 print(pluralize(["table", "table", "table"]))
@@ -590,17 +608,18 @@ Notes
     If number of times a letter appears in the list is greater than the number of times the letter appears in the string, the extra letters should be left behind (see example #2).
     If all the letters in the list are used in the string, the function should return an empty list (see example #3)."""
 
-def remove_letters(letters, word):
-    for i in word:
-        letters = [j for j in letters if j != i]
-    return letters
-print(remove_letters(["s", "t", "r", "i", "n", "g", "w"], "string"))
-print(remove_letters(["d", "b", "t", "e", "a", "i"], "edabit"))
+# def remove_letters(letters, word):
+#     for i in word:
+#         letters = [j for j in letters if j != i]
+#     return letters
+
+# print(remove_letters(["s", "t", "r", "i", "n", "g", "w"], "string"))
+# print(remove_letters(["d", "b", "t", "e", "a", "i"], "edabit"))
 
         
         
 """22.Create a function that takes a string txt and censors any word from a given list lst. 
- The text removed must be replaced by the given character char.
+he text removed must be replaced by the given character char.
 Examples
 censor_string("Today is a Wednesday!", ["Today", "a"], "-") ➞ "----- is - Wednesday!"
 
