@@ -21,8 +21,8 @@ print(y==z)
 2 ➞ 120"""
 
 x=5
-min=60
-print(x*min)
+minutes=60
+print(x*minutes)
 """4. Create a function that takes the age in years and returns the age in days.
 65 ➞ 23725
 0 ➞ 0
@@ -41,9 +41,9 @@ print(sum(2, 0))
 
 """"6. Create a function that accepts a measurement value in inches 
 and returns the equivalent of the measurement value in feet."""
-
-# Feet = Inches/ 12;
-# print("The length in Feet",round(Feet,2))
+Inches=1024
+Feet = Inches/ 12;
+print("The length in Feet",round(Feet,2))
 
 """7. Create a function that takes a number as an argument and returns "even"
 for even numbers and "odd" for odd numbers."""
@@ -53,10 +53,10 @@ for even numbers and "odd" for odd numbers."""
 #    print("{0} is Even".format(num))
 # else:
 #    print("{0} is Odd".format(num))
-x=10
+x=-10
 y=x%2
 # print("zuyg"*(y==0)+"kent"*y)  (not y -----------  y==0)
 print("zuig"*(not y)+"kent"*y)
-   
-   
-	
+x=13
+y=x%2
+print("zuig"*(y==0)+"kent"*y)
